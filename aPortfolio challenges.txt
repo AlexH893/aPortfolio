@@ -1,0 +1,9 @@
+You may want to consider adding a min-width to the images in percentage units of measurement. This will allow the images to grow in size and shrink always keeping the minimum amount of length as a percentage of the parents total width.
+
+In the example below I reset margin and padding to 0 using a universal selector => *, this will remove any unseen/unwanted margin or padding set by default browser settings for elements.
+
+Then we align the flex sub-container vertically using align-items: center; each figure element .gallery__thumb will set min-width: 33%. A slight gap of 10px margin between each remaining .gallery__thumb using general sibling combinator ~ => .gallery__thumb ~ .gallery__thumb { margin-left: 10px; }.
+
+Now as you resize the browser there will always be 3 images showing no matter the size of the browser. If you want 4 to show, change to 25%, 5 to 20%, etc... In some cases, you may need to add a calculated measurement using width: calc(33% - 20px), where 20 pixels may represent 10 pixels of left and right margin on a parent container for example.
+
+See resizing browser GIF

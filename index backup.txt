@@ -1,0 +1,247 @@
+<!-------------------------
+* Title: index.html
+* Author: Alex Haefner
+* Date: 08/05/2021
+* Description: Index page
+----------------------------
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title> Home - firstName lastName </title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">	<!--link rel="stylesheet" href="tailwind.css" -->
+</head>
+
+<body>
+	<h1>
+        <a href="index.html" style="  text-decoration: none;
+		color: black;">PORTFOLIO</a> 
+    </h1>
+	<main>
+		<div class="flex-container">
+			<div class="sub-container">
+				<figure class="gallery__thumb">
+					<img
+					 	class = "lazy"
+						src= "img/1.jpg"
+					 	data-src="img/1.jpg"
+						alt="">
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						src= "img/2.jpg"
+						data-src="img/2.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+					 	class = "lazy"
+						src= "img/3.jpg"
+					 	data-src="img/3.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						src= "img/4.jpg"
+						data-src="img/4.jpg"
+						alt="">
+				</figure>		
+				<figure class="gallery__thumb">
+					<img
+					 	class = "lazy"
+						src= "img/5.jpg"
+					 	data-src="img/5.jpg"
+						alt="">
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						src= "img/6.jpg"
+						data-src="img/6.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+					 	class = "lazy"
+						src= "img/7.jpg"
+					 	data-src="img/7.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						src= "img/8.jpg"
+						data-src="img/8.jpg"
+						alt="">
+				</figure>	
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						src= "img/9.jpg"
+						data-src="img/9.jpg"
+						alt="">
+				</figure>	
+				<figure class="gallery__thumb"  id= "test">
+					<img
+					 	class = "lazy"
+						 style = "max-height: 80vh;
+						 		  max-width: 60%;"
+						src= "img/10.jpg"
+					 	data-src="img/10.jpg"
+						alt="">
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						style = "max-height: 85vh;
+						max-width: 60%;"
+						src= "img/11.jpg"
+						data-src="img/11.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+					 	class = "lazy"
+						src= "img/12.jpg"
+					 	data-src="img/12.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						style = "max-height: 85vh;
+						max-width: 60%;"
+						src= "img/13.jpg"
+						data-src="img/13.jpg"
+						alt="">
+				</figure>		
+				<figure class="gallery__thumb">
+					<img
+					 	class = "lazy"
+						src= "img/14.jpg"
+					 	data-src="img/14.jpg"
+						alt="">
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						style = "max-height: 85vh;
+						max-width: 60%;"
+						src= "img/15.jpg"
+						data-src="img/15.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+					 	class = "lazy"
+						 style = "max-height: 85vh;
+						 max-width: 60%;"
+						src= "img/16.jpg"
+					 	data-src="img/16.jpg"
+						alt="">					
+				</figure>
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						style = "max-height: 85vh;
+						max-width: 60%;"
+						src= "img/17.jpg"
+						data-src="img/17.jpg"
+						alt="">
+				</figure>	
+				<figure class="gallery__thumb">
+					<img
+						class = "lazy"
+						src= "img/18.jpg"
+						data-src="img/18.jpg"
+						alt="">
+				</figure>															 
+			</div>
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+	<script>
+
+
+
+/**
+* Horizontal Scrolling
+*/
+const mouseWheel = document.querySelector('.sub-container');
+
+mouseWheel.addEventListener('wheel', function(e) {
+    const race = 45; // How many pixels to scroll
+
+    if (e.deltaY > 0) // Scroll right
+        mouseWheel.scrollLeft += race;
+    else // Scroll left
+        mouseWheel.scrollLeft -= race;
+		e.preventDefault();
+});
+
+
+
+
+
+	(function() {
+		function logElementEvent(eventName, element) {
+			console.log(Date.now(), eventName, element.getAttribute("data-src"));
+		}
+		var callback_enter = function(element) {
+			logElementEvent("🔑 ENTERED", element);
+		};
+		var callback_exit = function(element) {
+			logElementEvent("🚪 EXITED", element);
+		};
+		var callback_loading = function(element) {
+			logElementEvent("⌚ LOADING", element);
+		};
+		var callback_loaded = function(element) {
+			logElementEvent("👍 LOADED", element);
+		};
+		var callback_error = function(element) {
+			logElementEvent("💀 ERROR", element);
+			element.src = "https://via.placeholder.com/440x560/?text=Error+Placeholder";
+		};
+		var callback_finish = function() {
+			logElementEvent("✔️ FINISHED", document.documentElement);
+		};
+		var callback_cancel = function(element) {
+			logElementEvent("🔥 CANCEL", element);
+		};
+
+        var ll = new LazyLoad({
+          threshold: 0,
+          // Assign the callbacks defined above
+          callback_enter: callback_enter,
+          callback_exit: callback_exit,
+          callback_cancel: callback_cancel,
+          callback_loading: callback_loading,
+          callback_loaded: callback_loaded,
+          callback_error: callback_error,
+          callback_finish: callback_finish
+        });
+      })();
+
+
+
+
+	/**
+	* Prevent right click on image
+	*/
+	$('body').on('contextmenu', 'img', function(e){
+    e.preventDefault();
+		});
+	</script>
+</body>
+
+</html>
