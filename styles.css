@@ -60,3 +60,48 @@ img:not([src]) {
     height: 30%;
     }
 }
+
+
+header-component {
+  float: right;
+  margin-top: .8em;
+  margin-right: 3em;
+
+}
+
+ul.navList {
+
+  display: inline-flex;
+  list-style-type: none;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+a.link.link-ltr {
+
+  text-decoration: none;
+  /*color: rgb(126, 126, 126);*/
+  color: rgb(0, 0, 0);
+
+}
+
+a.link.link-ltr img {
+
+height: 16px;
+width: 16px;
+display: inherit;
+
+}
+
+ul.navList li {
+  
+  margin-inline-end: 1em;
+  font-size: .8em;
+}
+
+a.link.link-ltr:hover {
+  
+  text-decoration: none;
+  color: rgb(126, 126, 126);
+
+}
