@@ -102,6 +102,48 @@ ul.navList li {
 a.link.link-ltr:hover {
   
   text-decoration: none;
-  color: rgb(126, 126, 126);
+  color: rgb(84, 84, 84, 1.0);
 
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(84, 84, 84, 1.0);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+div.navbar-left {
+
+  list-style-type: none;
+}
+
+div#myDropdown.dropdown-content.show {
+font-family: 'Ubuntu', sans-serif;
+    font-size: .6em;
+    left: 20em;
 }

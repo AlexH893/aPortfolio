@@ -126,10 +126,39 @@
 			   </div>
 			</div>
 		 </main>
+
+
+
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
 	<script>
+
+/* When the user clicks on the Share link, 
+toggle between hiding and showing the dropdown content */
+function shareFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+// Close the share dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#share')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
 
 
 
