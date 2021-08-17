@@ -156,7 +156,7 @@ font-family: 'Ubuntu', sans-serif;
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .navbar-left a:not(:first-child) {display: none;}
   .navbar-left a.icon {
     float: right;
@@ -164,7 +164,7 @@ font-family: 'Ubuntu', sans-serif;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .navbar-left.responsive {position: relative;}
   .navbar-left.responsive .icon {
     position: absolute;
