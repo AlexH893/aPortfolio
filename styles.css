@@ -161,8 +161,11 @@ font-family: 'Ubuntu', sans-serif;
   .navbar-left a.icon {
     float: right;
     display: block;
+    
   }
 }
+
+
 
 @media screen and (max-width: 900px) {
   .navbar-left.responsive {position: relative;}
@@ -171,6 +174,20 @@ font-family: 'Ubuntu', sans-serif;
     right: 0;
     top: 0;
   }
+
+
+
+  @media screen and (max-width: 900px) {
+  .navbar-left a.icon {
+      float: right;
+      display: block;
+      margin-right: -1em;
+  }
+}
+
+
+
+
   .navbar-left.responsive a{
     float: none;
     display: block;
