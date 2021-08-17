@@ -200,3 +200,15 @@ font-family: 'Ubuntu', sans-serif;
     text-align: left;
   }
 }
+
+
+@media screen and (max-width: 900px) {
+.sub-container {
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  /* height: 90vh; */
+  column-gap: 20px;
+  }
+}
+
