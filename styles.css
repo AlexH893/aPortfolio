@@ -207,7 +207,7 @@ font-family: 'Ubuntu', sans-serif;
   display: flex;
   overflow-x: auto;
   align-items: center;
-  /* height: 90vh; */
+   height: auto; 
   column-gap: 20px;
   }
 }
