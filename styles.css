@@ -69,7 +69,7 @@ header-component {
 
 }
 
-ul.navList {
+.navbar-left {
 
   display: inline-flex;
   list-style-type: none;
@@ -77,7 +77,7 @@ ul.navList {
 
 }
 
-a.link.link-ltr {
+a {
 
   text-decoration: none;
   /*color: rgb(126, 126, 126);*/
@@ -85,7 +85,7 @@ a.link.link-ltr {
 
 }
 
-a.link.link-ltr img {
+a img {
 
 height: 16px;
 width: 16px;
@@ -93,13 +93,13 @@ display: inherit;
 
 }
 
-ul.navList li {
+.navbar-left a{
   
   margin-inline-end: 1em;
   font-size: .8em;
 }
 
-a.link.link-ltr:hover {
+a:hover {
   
   text-decoration: none;
   color: rgb(84, 84, 84, 1.0);
@@ -112,7 +112,7 @@ a.link.link-ltr:hover {
   display: inline-block;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+ .dropbtn:hover, .dropbtn:focus {
   background-color: #2980B9;
 }
 
@@ -145,5 +145,35 @@ div.navbar-left {
 div#myDropdown.dropdown-content.show {
 font-family: 'Ubuntu', sans-serif;
     font-size: .6em;
-    left: 20em;
+    right: .5em;
+    top: 3em;
+
+}
+
+.navbar-left .icon {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .navbar-left a:not(:first-child) {display: none;}
+  .navbar-left a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-left.responsive {position: relative;}
+  .navbar-left.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar-left.responsive a{
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
