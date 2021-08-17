@@ -1,0 +1,139 @@
+<!-------------------------
+   * Title: contact.html
+   * Author: Alex Haefner
+   * Date: 08/17/2021
+   * Description: Contact page
+   ----------------------------
+   -->
+   <!DOCTYPE html>
+   <html lang="en">
+	  <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <meta charset="UTF-8" />
+		 <title> Home - Ash Hupperts</title>
+		 <link rel="stylesheet" href="styles.css" />
+		 <link rel="preconnect" href="https://fonts.googleapis.com">
+		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+		 <!--link rel="stylesheet" href="tailwind.css" -->
+
+
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 <script type = "module" src="header.js"></script>
+	  </head>
+	  <body>
+		<header-component></header-component>
+
+		 <h1>
+			<a href="index.html" style="  text-decoration: none;
+			   color: black;">ASH HUPPERTS</a> 
+		 </h1>
+		 <main>
+
+			<div class = "box">
+				<div><h1 id="bioHead">Biography</h1></div>
+				<hr>	
+				<p id="bioTxt">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<br /><br />
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					<br /><br />
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				</p>
+	
+ </div>
+
+ <div class = "box">
+	<div><h1 id="clientHead">Clients</h1></div>
+	<hr>	
+	<ul id = "clientList">
+		<li id="client">
+			Band1
+		</li>
+		<li id="client">
+			Band2
+		</li>
+		<li id="client">
+			Band3
+		</li>
+	</ul>
+	<ul id = "clientList2">
+		<li id="client">
+			Band1
+		</li>
+		<li id="client">
+			Band2
+		</li>
+		<li id="client">
+			Band3
+		</li>
+	</ul>
+</div>
+
+<div class = "box">
+	<div><h1 id="contactHead">Contact</h1></div>
+	<hr>	
+	<p id="contactTxt">
+		For press, features or bookings please contact:<br /><br />
+
+		example@email.com
+</p>
+		 </main>
+</body>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+	<script>
+
+//Hamberder
+function theFunction() {
+  var x = document.getElementById("myNav");
+  if (x.className === "navbar-left") {
+    x.className += " responsive";
+	x.style.height = "100%";
+
+  } else {
+    x.className = "navbar-left";
+  }
+}
+
+/*function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}*/
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+
+
+/* When the user clicks on the Share link, 
+toggle between hiding and showing the dropdown content */
+function shareFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+// Close the share dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#share')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+</body>
+
+</html>
