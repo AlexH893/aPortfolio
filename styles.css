@@ -211,4 +211,10 @@ font-family: 'Ubuntu', sans-serif;
   column-gap: 20px;
   }
 }
-
+@media screen and (max-width: 900px) {
+img {
+display: block;
+    width: auto;
+    height: 80vh;
+}
+}
