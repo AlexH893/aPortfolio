@@ -185,7 +185,13 @@ font-family: 'Ubuntu', sans-serif;
   }
 }
 
+@media screen and (max-width: 900px) {
+  h1 {
 
+      font-size: 1.9em;
+
+  }
+}
 
 
   .navbar-left.responsive a{
