@@ -10,14 +10,13 @@
 	  <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <meta charset="UTF-8" />
-		 <title> Home - firstName lastName </title>
+		 <title> Home - Ash Hupperts</title>
 		 <link rel="stylesheet" href="styles.css" />
 		 <link rel="preconnect" href="https://fonts.googleapis.com">
 		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 		 <!--link rel="stylesheet" href="tailwind.css" -->
 
-		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		 <script type = "module" src="header.js"></script>
@@ -146,12 +145,20 @@ function theFunction() {
   var x = document.getElementById("myNav");
   if (x.className === "navbar-left") {
     x.className += " responsive";
+	x.style.height = "100%";
+
   } else {
     x.className = "navbar-left";
   }
 }
 
+/*function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}*/
 
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
 
 
 
