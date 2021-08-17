@@ -1,5 +1,22 @@
 /* ./your-css-folder/styles.css */
 
+/* Fading page */
+body {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+/* !Fading page */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +26,6 @@
 
 h1 {
   margin-top: .5rem;
-  margin-left: .5em;
   margin-bottom: .4em;
   font-family: 'Ubuntu', sans-serif;
   font-size: 2.5em;
@@ -165,8 +181,11 @@ font-family: 'Ubuntu', sans-serif;
   }
 }
 
-
-
+/*
+@media screen and (max-width: 900px) {
+  .navbar-left a:nth-child(6) {display: none;}
+}
+*/
 @media screen and (max-width: 900px) {
   .navbar-left.responsive {position: relative;}
   .navbar-left.responsive .icon {
@@ -227,3 +246,81 @@ margin: 0;
     margin-left: .1em;
   }
 }
+
+@media screen and (max-width: 900px) {
+  a.icon i.fa.fa-bars {
+    display: contents;
+  }
+  }
+
+
+
+
+
+  /** Contact */
+
+
+  div.box{
+    display: flex;
+    margin-top: 15vh;
+  }
+
+  .hide {
+    visibility: collapse;
+  }
+
+  h1#bioHead {
+    display: flex;
+    padding-right: 3vw;
+    margin-left: 10vw;
+  }
+  
+  h1#clientHead{
+    display: flex;
+    padding-right: 6.9vw;
+    margin-left: 10vw;
+  }
+
+  h1#contactHead {
+
+    display: flex;
+    padding-right: 5.9vw;
+    margin-left: 10vw;  
+  }
+
+  p#bioTxt, p#clientTxt, p#contactTxt {
+    margin-right: 20vw;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+  }
+
+  .horizontal {
+    flex-direction: column;
+  }
+  
+  hr {
+    min-height: 100%;
+    max-height: 100vh;
+    margin: 0;
+  }
+
+
+ul#clientList {
+  padding-left: 1vw;
+}
+
+ul#clientList2 {
+  margin-left: 25vw;
+}
+
+li#client {
+  margin-bottom: 1em;
+}
+
+/* Remove BR on small screen */
+  @media screen and (max-width: 700px) {
+  p#bioTxt br 
+             {
+                display: none;
+             }
+            }
