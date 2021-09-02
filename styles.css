@@ -334,3 +334,10 @@ li#client {
     text-align: center;
     }
   }
+
+@media screen and (max-width: 900px) {
+  p#bioTxt {
+    text-align: center;
+    margin-left: 10vw;
+  }
+}
