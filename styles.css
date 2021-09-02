@@ -332,6 +332,7 @@ li#client {
 @media screen and (max-width: 900px) {
   h1#bioHead {
     text-align: center;
+    margin-right: 10vw;
     }
   }
 
