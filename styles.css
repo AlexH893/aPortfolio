@@ -2,7 +2,7 @@
 
 /* Fading page */
 body {
-  animation: fadeInAnimation ease 1s;
+  animation: fadeInAnimation ease .5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -298,7 +298,7 @@ margin: 0;
     flex-direction: column;
   }
   
-  hr {
+  hr.spacer {
     min-height: 100%;
     max-height: 100vh;
     margin: 0;
@@ -324,3 +324,10 @@ li#client {
                 display: none;
              }
             }
+
+
+@media screen and (max-width: 700px) {
+  div.box{
+    display: block;
+  }
+  }

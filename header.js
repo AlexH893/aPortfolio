@@ -12,7 +12,7 @@ class Header extends HTMLElement {
                <a href="index.html">Work</a>
                <a href="contact.html">Contact</a>
                <a href="https://www.instagram.com/honeybunnyink/" target="blank"><img src="img/ico/instagram.png"/></a>
-               <a href="index.html"><img src="img/ico/tiktok.png"/></a>
+               <a href="https://www.tiktok.com/@honeybunnyink" target="blank"><img src="img/ico/tiktok.png"/></a>
                <a id="share" href="javascript:void(0)" onClick="shareFunction();">Share</a>
                <a href="javascript:void(0);" class="icon" onclick="theFunction()">
                 <i class="fa fa-bars"></i></li>
