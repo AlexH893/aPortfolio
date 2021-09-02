@@ -271,7 +271,7 @@ margin: 0;
   }
 
   h1#bioHead {
-    display: flex;
+    /*display: flex;*/
     padding-right: 3vw;
     margin-left: 10vw;
   }
@@ -318,20 +318,19 @@ li#client {
   margin-bottom: 1em;
 }
 
-/* Remove BR on small screen */
-  @media screen and (max-width: 800px) {
-  p#bioTxt br 
-             {
-                display: none;
-             }
-            }
+
 
 
 
 
   @media screen and (max-width: 900px) {
-
-    .box {
-      flex-direction: column;
+  .box {
+    flex-direction: column;
   }
 }
+
+@media screen and (max-width: 900px) {
+  h1#bioHead {
+    text-align: center;
+    }
+  }
