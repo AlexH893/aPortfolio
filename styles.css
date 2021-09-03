@@ -277,14 +277,14 @@ margin: 0;
   }
   
   h1#clientHead{
-    display: flex;
+    /*display: flex;*/
     padding-right: 6.9vw;
     margin-left: 10vw;
   }
 
   h1#contactHead {
 
-    display: flex;
+    /*display: flex;*/
     padding-right: 5.9vw;
     margin-left: 10vw;  
   }
@@ -330,15 +330,42 @@ li#client {
 }
 
 @media screen and (max-width: 900px) {
-  h1#bioHead {
+  hr.spacer {
+    display: none;
+  }
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+  h1#bioHead, h1#clientHead, h1#contactHead {
     text-align: center;
     margin-right: 10vw;
+    margin-bottom: 5vh;
     }
   }
 
 @media screen and (max-width: 900px) {
-  p#bioTxt {
+  p#bioTxt, p#contactTxt {
     text-align: center;
-    margin-left: 10vw;
+    margin-left: 15vw;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  ul#clientList {
+    text-align: center;
+    list-style-type: none;
+    margin-right: 8vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  ul#clientList2 {
+    text-align: center;
+    list-style-type: none;
+    margin-right: 31vw;
   }
 }
