@@ -9,7 +9,7 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <div class="navbar-left" id="myNav">
                <a href="index.html" >Home</a>
-               <a href="index.html">Work</a>
+               <a href="work.html">Work</a>
                <a href="contact.html">Contact</a>
                <a href="https://www.instagram.com/honeybunnyink/" target="blank"><img src="img/ico/instagram.png"/></a>
                <a href="https://www.tiktok.com/@honeybunnyink" target="blank"><img src="img/ico/tiktok.png"/></a>
