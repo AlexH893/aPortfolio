@@ -1,0 +1,257 @@
+<!-------------------------
+   * Title: photography.html
+   * Author: Alex Haefner
+   * Date: 09/07/2021
+   * Description: Photography work page
+   ----------------------------
+   -->
+   <!DOCTYPE html>
+   <html lang="en">
+	  <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <meta charset="UTF-8" />
+		 <title> Photography - Ash Hupperts</title>
+		 <link rel="stylesheet" href="styles.css" />
+		 <link rel="preconnect" href="https://fonts.googleapis.com">
+		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+
+
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 <script type = "module" src="header.js"></script>
+	  </head>
+	  <body>
+		<header-component></header-component>
+
+		 <h1>
+			<a href="index.html" style="  text-decoration: none;
+			   color: black;">ASH HUPPERTS</a> 
+		 </h1>
+		 <main>
+			<div class="flex-container">
+			   <div class="sub-container">
+				  <img
+					 class = "lazy"
+					 src= "img/15.jpg"
+					 data-src="img/15.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/12.jpg"
+					 data-src="img/12.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 src= "img/3.jpg"
+					 data-src="img/3.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 src= "img/4.jpg"
+					 data-src="img/4.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/5.jpg"
+					 data-src="img/5.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/16.jpg"
+					 data-src="img/16.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 src= "img/17.jpg"
+					 data-src="img/17.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 src= "img/8.jpg"
+					 data-src="img/8.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/9.jpg"
+					 data-src="img/9.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/18.jpg"
+					 data-src="img/18.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/11.jpg"
+					 data-src="img/11.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 src= "img/2.jpg"
+					 data-src="img/2.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 src= "img/13.jpg"
+					 data-src="img/13.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/14.jpg"
+					 data-src="img/14.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 style = "max-height: 85vh;
+					 max-width: 60%;"
+					 src= "img/1.jpg"
+					 data-src="img/1.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 style = "max-height: 85vh;
+					 max-width: 60%;"
+					 src= "img/6.jpg"
+					 data-src="img/6.jpg"
+					 alt="">					
+				  <img
+					 class = "lazy"
+					 style = "max-height: 85vh;
+					 max-width: 60%;"
+					 src= "img/7.jpg"
+					 data-src="img/7.jpg"
+					 alt="">
+				  <img
+					 class = "lazy"
+					 src= "img/10.jpg"
+					 data-src="img/10.jpg"
+					 alt="">
+			   </div>
+			</div>
+		 </main>
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+	<script>
+
+//Hamberder
+function theFunction() {
+  var x = document.getElementById("myNav");
+  if (x.className === "navbar-left") {
+    x.className += " responsive";
+	x.style.height = "100%";
+
+  } else {
+    x.className = "navbar-left";
+  }
+}
+
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+
+
+/* When the user clicks on the Share link, 
+toggle between hiding and showing the dropdown content */
+function shareFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+// Close the share dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#share')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+
+
+
+/**
+ * Horizontal Scrolling
+ */
+ const mouseWheel = document.querySelector('.sub-container');
+
+mouseWheel.addEventListener('wheel', function(e) {
+    const race = 70; // How many pixels to scroll
+
+    if (e.deltaY > 0) // Scroll right
+        mouseWheel.scrollLeft += race;
+    else // Scroll left
+        mouseWheel.scrollLeft -= race;
+    e.preventDefault();
+});
+
+
+
+
+(function() {
+    function logElementEvent(eventName, element) {
+        console.log(Date.now(), eventName, element.getAttribute("data-src"));
+    }
+    var callback_enter = function(element) {
+        logElementEvent("🔑 ENTERED", element);
+    };
+    var callback_exit = function(element) {
+        logElementEvent("🚪 EXITED", element);
+    };
+    var callback_loading = function(element) {
+        logElementEvent("⌚ LOADING", element);
+    };
+    var callback_loaded = function(element) {
+        logElementEvent("👍 LOADED", element);
+    };
+    var callback_error = function(element) {
+        logElementEvent("💀 ERROR", element);
+        element.src = "https://via.placeholder.com/440x560/?text=Error+Placeholder";
+    };
+    var callback_finish = function() {
+        logElementEvent("✔️ FINISHED", document.documentElement);
+    };
+    var callback_cancel = function(element) {
+        logElementEvent("🔥 CANCEL", element);
+    };
+
+    var ll = new LazyLoad({
+        threshold: 0,
+        // Assign the callbacks defined above
+        callback_enter: callback_enter,
+        callback_exit: callback_exit,
+        callback_cancel: callback_cancel,
+        callback_loading: callback_loading,
+        callback_loaded: callback_loaded,
+        callback_error: callback_error,
+        callback_finish: callback_finish
+    });
+})();
+
+
+/**
+ * Prevent right click on image
+ */
+$('body').on('contextmenu', 'img', function(e) {
+    e.preventDefault();
+}); 
+
+</script>
+</body>
+
+</html>

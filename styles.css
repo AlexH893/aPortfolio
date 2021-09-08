@@ -370,3 +370,21 @@ li#client {
     margin-right: 31vw;
   }
 }
+
+
+/* work */
+div#workBox.box{
+  display: inherit;
+  margin-top: 15vh;
+  text-align: center;
+}
+
+/* When a user hovers over the image, transition opacity reduces to 70% in .25 seconds */
+img#workImg:hover {
+
+  opacity: 70%;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+
+}
